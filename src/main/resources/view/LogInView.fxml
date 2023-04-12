@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="361.0" prefWidth="630.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.controller.LogInViewController">
+   <children>
+      <Separator layoutX="191.0" layoutY="6.0" orientation="VERTICAL" prefHeight="387.0" prefWidth="1.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="199.0" AnchorPane.topAnchor="2.0" />
+      <VBox alignment="CENTER" layoutX="26.0" layoutY="90.0" prefHeight="281.0" prefWidth="155.0" spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <StackPane layoutX="26.0" layoutY="90.0" style="-fx-border-color: grey;">
+               <children>
+                  <ImageView fx:id="imgMain" fitHeight="150.0" fitWidth="153.0" layoutX="26.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" styleClass="f" AnchorPane.bottomAnchor="160.0" AnchorPane.topAnchor="90.0">
+                     <image>
+                        <Image url="@../icon/pos-system-main-icon.jpg" />
+                     </image></ImageView>
+               </children>
+            </StackPane>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="34.0" layoutY="248.0" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="147.0" text="WELCOME!" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="248.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="20.0" prefWidth="202.0" text="DEP10 POS SYSYEM">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDateTime" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="272.0" text="2023. 02. 03 : 00.00">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="224.0" layoutY="56.0" prefHeight="255.0" prefWidth="380.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="327.0" text="Login" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="38.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Separator>
+            <HBox alignment="CENTER_LEFT" layoutX="224.0" layoutY="111.0" prefHeight="30.0" prefWidth="380.0">
+               <children>
+                  <StackPane style="-fx-border-color: grey;">
+                     <children>
+                        <ImageView fx:id="imgUsername" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../icon/username-icon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <TextField fx:id="txtUsername" layoutX="360.0" layoutY="111.0" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="227.0" promptText="Enter username" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="234.0" layoutY="121.0" prefHeight="30.0" prefWidth="380.0">
+               <children>
+                  <StackPane prefHeight="30.0" prefWidth="30.0" style="-fx-border-color: grey;">
+                     <children>
+                        <ImageView fx:id="imgPassword" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../icon/password-icon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </StackPane>
+                  <TextField fx:id="txtPassword" layoutX="360.0" layoutY="111.0" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="272.0" promptText="Enter password" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" minHeight="35.0" prefHeight="35.0" prefWidth="380.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnLogin" defaultButton="true" layoutX="284.0" layoutY="241.0" minHeight="30.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="30.0" prefWidth="203.0" text="LOGIN" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

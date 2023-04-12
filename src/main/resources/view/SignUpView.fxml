@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="726.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.controller.SignUpViewController">
+    <children>
+        <Separator layoutX="191.0" layoutY="6.0" orientation="VERTICAL" prefHeight="387.0" prefWidth="1.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="199.0" AnchorPane.topAnchor="2.0" />
+        <VBox alignment="CENTER" layoutX="26.0" layoutY="90.0" prefHeight="281.0" prefWidth="155.0" spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <StackPane layoutX="26.0" layoutY="90.0" style="-fx-border-color: grey;">
+                    <children>
+                        <ImageView fx:id="imgMain" fitHeight="150.0" fitWidth="153.0" layoutX="26.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" styleClass="f" AnchorPane.bottomAnchor="160.0" AnchorPane.topAnchor="90.0">
+                            <image>
+                                <Image url="@../icon/pos-system-main-icon.jpg" />
+                            </image></ImageView>
+                    </children>
+                </StackPane>
+                <VBox alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" layoutX="34.0" layoutY="248.0" maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="147.0" text="WELCOME!" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="248.0">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="202.0" text="DEP10 POS SYSYEM">
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblDateTime" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="272.0" text="2023. 02. 03 : 00.00">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                            <font>
+                                <Font size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="224.0" layoutY="56.0" prefHeight="255.0" prefWidth="380.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="327.0" text="Signup" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="System Bold" size="38.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin>
+                </Separator>
+                <HBox alignment="CENTER_LEFT" layoutX="224.0" layoutY="111.0" prefHeight="30.0" prefWidth="380.0">
+                    <children>
+                  <Label minWidth="95.0" prefWidth="95.0" text="Username :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                        <TextField fx:id="txtUsername" layoutX="360.0" layoutY="111.0" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="227.0" promptText="Use only Letters and Digts" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="234.0" layoutY="121.0" prefHeight="30.0" prefWidth="380.0">
+                    <children>
+                  <Label minWidth="95.0" prefHeight="20.0" prefWidth="95.0" text="Full name : ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                        <TextField fx:id="txtFullName" layoutX="360.0" layoutY="111.0" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="272.0" promptText="Enter your name" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="225.0" prefHeight="30.0" prefWidth="380.0">
+               <children>
+                  <Label minWidth="95.0" prefWidth="95.0" text="Password :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPassword" layoutX="360.0" layoutY="111.0" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="272.0" promptText="At leat 5 characters with Lower, Upper, Digit, Symbol " HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="250.0" prefHeight="30.0" prefWidth="380.0">
+               <children>
+                  <Label minWidth="95.0" prefHeight="20.0" prefWidth="95.0" text="Confirm  :">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtConfirmPW" layoutX="360.0" layoutY="111.0" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="272.0" promptText="Re-enter the password" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+                <HBox alignment="TOP_CENTER" minHeight="35.0" prefHeight="35.0" prefWidth="380.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="btnSignup" defaultButton="true" layoutX="284.0" layoutY="241.0" minHeight="30.0" mnemonicParsing="false" onAction="#btnSignupOnAction" prefHeight="30.0" prefWidth="230.0" text="SIGN-UP" />
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
