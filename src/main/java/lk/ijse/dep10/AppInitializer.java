@@ -45,7 +45,7 @@ public class AppInitializer extends Application {
                 InputStream is = getClass().getResourceAsStream("/schema.sql");
                 InputStreamReader isr = new InputStreamReader(is);
                 BufferedReader br = new BufferedReader(isr);
-                String line=null;
+                String line;
                 StringBuilder dbScript = new StringBuilder();
                 while ((line = br.readLine()) != null) {
                     dbScript.append(line).append("\n");
@@ -65,8 +65,9 @@ public class AppInitializer extends Application {
         try {
             Connection connection = DBConnection.getInstance().getConnection();
             Statement stm = connection.createStatement();
-            return stm.executeQuery("SELECT *FROM User WHERE role='ADMIN'").next();
+            return stm.executeQuery("SELECT * FROM User WHERE role='ADMIN'").next();
         } catch (SQLException e) {
+
             throw new RuntimeException(e);
         }
     }

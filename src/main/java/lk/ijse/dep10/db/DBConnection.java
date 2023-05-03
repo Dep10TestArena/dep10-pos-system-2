@@ -39,7 +39,7 @@ public class DBConnection {
        return dbConnection == null ? dbConnection = new DBConnection() : dbConnection;
     }
 
-    public static Connection getConnection() {
+    public Connection getConnection() {
         return connection;
     }
 }

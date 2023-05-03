@@ -16,13 +16,16 @@ import javafx.util.Duration;
 import lk.ijse.dep10.db.DBConnection;
 import lk.ijse.dep10.model.User;
 import lk.ijse.dep10.util.PasswordEncoder;
+import lk.ijse.dep10.util.Role;
 
+import java.math.BigDecimal;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 public class LogInViewController {
      public ImageView imgPassword;
@@ -72,13 +75,16 @@ public class LogInViewController {
                 }
 
                 String fullName = rst.getString("full_name");
-                User.Role role = User.Role.valueOf(rst.getString("role"));
-                User principle = new User(fullName, userName, password, role);
+                Role role = Role.valueOf(rst.getString("role"));
+                User principle = new User(fullName, userName, password, role, 0, new BigDecimal("0.0"),new ArrayList<>());
                 System.getProperties().put("principal", principle);
                 Scene mainViewScene = new Scene(FXMLLoader.load(getClass().getResource("/view/MainView.fxml")));
                 Stage stage = (Stage) btnLogin.getScene().getWindow();
+                stage.setMinWidth(1320);
+                stage.setMinHeight(850);
                 stage.setScene(mainViewScene);
                 stage.setTitle("Main Panel");
+//                stage.setFullScreen(true);
                 stage.centerOnScreen();
             }
 

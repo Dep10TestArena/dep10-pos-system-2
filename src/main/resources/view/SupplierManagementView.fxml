@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="618.0" prefWidth="1075.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.controller.SupplierManagementViewController">
+   <children>
+      <Button fx:id="btnNewSupplier" layoutX="33.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnNewSupplierOnAction" prefHeight="30.0" prefWidth="100.0" text="+ NEW" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="30.0" minWidth="400.0" text="Supplier Management" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutX="10.0" layoutY="75.0" prefHeight="3.0" prefWidth="1050.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0" />
+      <HBox layoutX="41.0" layoutY="87.0" prefHeight="120.0" prefWidth="1050.0" spacing="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="95.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="41.0" layoutY="111.0" minWidth="320.0" prefHeight="120.0" prefWidth="320.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox layoutX="41.0" layoutY="111.0" minHeight="30.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="41.0" layoutY="111.0" minHeight="30.0" prefHeight="25.0" prefWidth="85.0" text="Name">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtName" layoutX="145.0" layoutY="111.0" maxWidth="1.7976931348623157E308" minHeight="30.0" promptText="Enter Name" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="51.0" layoutY="121.0" minHeight="30.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="41.0" layoutY="111.0" minHeight="30.0" prefHeight="25.0" prefWidth="85.0" text="ID">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtId" layoutX="145.0" layoutY="111.0" maxWidth="1.7976931348623157E308" minHeight="30.0" promptText="Enter ID" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="45.0" minHeight="30.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="41.0" layoutY="111.0" minHeight="30.0" prefHeight="25.0" prefWidth="85.0" text="Company ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCompany" layoutX="145.0" layoutY="111.0" maxWidth="1.7976931348623157E308" minHeight="30.0" promptText="Enter Company Name" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="343.0" layoutY="111.0" maxWidth="400.0" minWidth="320.0" prefHeight="120.0" prefWidth="320.0" spacing="10.0">
+               <children>
+                  <HBox layoutX="41.0" layoutY="111.0" prefHeight="95.0" prefWidth="311.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" spacing="10.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" layoutX="41.0" layoutY="111.0" minHeight="30.0" prefHeight="25.0" prefWidth="100.0" text="Contact No">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnContactAdd" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" onAction="#btnContactAddOnAction" text="Add" />
+                              <Button fx:id="btnRemoveContact" layoutX="10.0" layoutY="35.0" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" onAction="#btnRemoveContactOnAction" text="Remove" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="120.0" prefWidth="225.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="txtContact" minHeight="30.0" promptText="011-1234567" />
+                              <ListView fx:id="lstContact" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="200.0" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="648.0" layoutY="87.0" maxWidth="400.0" minWidth="320.0" prefHeight="120.0" prefWidth="346.0" spacing="10.0">
+               <children>
+                  <HBox layoutX="41.0" layoutY="111.0" prefHeight="120.0" prefWidth="354.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox spacing="10.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="30.0" prefWidth="300.0" spacing="10.0">
+                                 <children>
+                                    <Label layoutX="20.0" layoutY="268.0" prefHeight="30.0" text="Short Code">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnShortCode" mnemonicParsing="false" onAction="#btnShortCodeOnAction" prefHeight="25.0" prefWidth="18.0" text="&gt;" />
+                                    <TextField fx:id="txtCode" layoutX="51.0" layoutY="263.0" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="170.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="btnSave" defaultButton="true" layoutX="274.0" layoutY="238.0" minHeight="30.0" minWidth="160.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="SAVE" />
+                                    <Button fx:id="btnDelete" layoutX="376.0" layoutY="238.0" minHeight="30.0" minWidth="160.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="DELETE" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="238.0" prefHeight="30.0" prefWidth="1045.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="240.0">
+         <children>
+            <TextField fx:id="txtSearch" layoutX="74.0" layoutY="241.0" maxWidth="1.7976931348623157E308" minHeight="30.0" promptText="Quick Search From  Any Related World" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <TableView fx:id="tblSupplier" layoutX="376.0" layoutY="298.0" prefHeight="288.0" prefWidth="1045.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="295.0">
+        <columns>
+          <TableColumn prefWidth="127.0" text="Company" />
+          <TableColumn prefWidth="115.0" text="Short Code" />
+            <TableColumn prefWidth="180.0" text="Supplier Name" />
+            <TableColumn prefWidth="261.0" text="Supplier NIC" />
+            <TableColumn prefWidth="180.0" text="Main Category List" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

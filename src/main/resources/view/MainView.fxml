@@ -7,9 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.controller.MainViewController">
+<AnchorPane minHeight="850.0" minWidth="1320.0" prefHeight="850.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.controller.MainViewController">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="137.0" layoutY="68.0" prefHeight="253.0" prefWidth="250.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0">
+      <VBox alignment="CENTER" layoutX="137.0" layoutY="20.0" prefHeight="568.0" prefWidth="225.0" spacing="25.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
          <children>
             <Button fx:id="btnUserManagement" layoutX="163.0" layoutY="68.0" mnemonicParsing="false" onAction="#btnUserManagementOnAction" prefHeight="30.0" prefWidth="215.0" text="User Management" />
             <Button fx:id="btnSupplierManagement" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnSupplierManagementOnAction" prefHeight="30.0" prefWidth="215.0" text="Supplier Management" />
@@ -17,12 +17,14 @@
             <Button fx:id="btnItemManagement" layoutX="10.0" layoutY="45.0" mnemonicParsing="false" onAction="#btnItemManagementOnAction" prefHeight="30.0" prefWidth="215.0" text="Item Management" />
             <Button fx:id="btnPurchaseOrder" layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onAction="#btnPurchaseOrderOnAction" prefHeight="30.0" prefWidth="215.0" text="Purchase Order/ G.N.R" />
             <Button fx:id="btnCashInvoice" layoutX="28.0" layoutY="170.0" mnemonicParsing="false" onAction="#btnCashInvoiceOnAction" prefHeight="30.0" prefWidth="215.0" text="Cash Invoice/ Customer Order" />
+            <Label lineSpacing="2.0" prefHeight="91.0" prefWidth="236.0" text="Need to be Designed this Main UI. Will do it later! Add more buttons if you want and let's continue the task." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </VBox>
-      <Label layoutX="11.0" layoutY="231.0" lineSpacing="2.0" prefHeight="98.0" prefWidth="250.0" text="Need to be Designed this Main UI. Will do it later! Add more buttons if you want and let's continue the task." textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
+      <AnchorPane fx:id="panel" layoutX="291.0" layoutY="3.0" minHeight="665.0" minWidth="1024.0" prefHeight="840.0" prefWidth="1024.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Separator layoutX="246.0" layoutY="15.0" orientation="VERTICAL" prefHeight="510.0" prefWidth="0.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="15.0" />
    </children>
 </AnchorPane>
